@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input id="number-input" type="number">
+    <button onclick="displayNumber()">Display Number</button>
+    <p id="display"></p>
+    <script>
+    function displayNumber() {
+    var numberInput = document.getElementById("number-input");
+    var numberValue = numberInput.value;
+    var displayElement = document.getElementById("display");
+
+    if(numberValue<0){
+         displayElement.innerHTML = "enter a positive number";
+    }
+    else if(numberValue%2===0){
+        var nextEvenNumbers = [Number(numberValue) + 2, Number(numberValue) + 4, Number(numberValue) + 6];
+        displayElement.innerHTML = "Next 3 even numbers: " + nextEvenNumbers.join(", ");
+        
+    }
+    else{
+        var nextEvenNumbers = [Number(numberValue) + 2, Number(numberValue) + 4, Number(numberValue) + 6];
+        displayElement.innerHTML = "Next 3 even numbers: " + nextEvenNumbers.join(", ");
+    }
+   
+}
+    </script>
+</body>
+</html>
